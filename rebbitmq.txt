@@ -1,5 +1,4 @@
-﻿wangwb bfenzhi
-一、  概述 
+﻿一、  概述 
 消息队列种类繁多，例如RabbitMQ、ActiveMQ、ZeroMQ、Kafka等。本期主要介绍RabbitMQ。RabbitMQ是一个消息中间件，它的工作就是发送和接收消息。主要使用场景有：异步处理、应用解耦、流量消峰及消息通讯等。RabbitMQ采用Erlang语言，基于AMQP(Advanced Message Queue Protocol 高级消息队列协议)的开源实现。
 AMQP是一个提供统一消息服务的应用层标准协议，基于此协议的客户端与消息中间件可传递消息，不受开发语言、MQ产品的限制。
 二、  基本概念
@@ -11,8 +10,6 @@ AMQP是一个提供统一消息服务的应用层标准协议，基于此协议�
 
 三、  RabbitMQ 基本组成
 打开RabbitMQ监控管理界面，可以看到RabbitMQ由很多不同的部分组成：
-aa  
-
 Connection:连接，位于客户端和Broker之间的TCP连接
 Channel:信道，仅仅创建客户端和Broker之间的连接后，客户端还不能发送消息。需要为每一个Connection创建Channel，AMQP协议只有通过 Channel才能执行AMQP命令。一个Connection可以包含多个Channel。
 Exchange:接收生产者发送的消息，并根据Binding规则将消息路由给服务器中的队列。Exchange类型有direct、Fanout和Topic、headers，不同类型的Exchange路由的行为不同。其中发布订阅模型设定的Exchange Type即为Topic，点对点的队列Queue的Exchange Type为direct。
