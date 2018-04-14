@@ -15,7 +15,7 @@ AMQP是一个提供统一消息服务的应用层标准协议，基于此协议�
 
 三、  RabbitMQ 基本组成
 打开RabbitMQ监控管理界面，可以看到RabbitMQ由很多不同的部分组成：
-  
+aa  
 
 Connection:连接，位于客户端和Broker之间的TCP连接
 Channel:信道，仅仅创建客户端和Broker之间的连接后，客户端还不能发送消息。需要为每一个Connection创建Channel，AMQP协议只有通过 Channel才能执行AMQP命令。一个Connection可以包含多个Channel。
